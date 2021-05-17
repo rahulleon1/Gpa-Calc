@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>GPA Calculator</title>
+  <link rel="icon" href="images/icon.ico">
+
+  <!-- google-fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=B612:wght@400;700&family=Bangers&family=Bebas+Neue&family=Black+Ops+One&family=Blinker:wght@400;700&family=Bowlby+One+SC&family=Bungee&family=Bungee+Shade&family=Coda+Caption:wght@800&family=Codystar&family=Faster+One&family=Frijole&family=Graduate&family=Major+Mono+Display&family=Notable&family=Oswald&family=Passion+One:wght@400;700&family=Ranchers&family=Roboto:wght@400;700&family=Rubik+Mono+One&family=Staatliches&family=Stick&family=Ubuntu:wght@400;700&family=Volkhov&display=swap"
+    rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- font-awesome -->
+  <script src="https://kit.fontawesome.com/847a3db264.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!-- Screen-Overlay for home / kind-of a loader -->
+
+  <div class="screen-overlay">
+    <div class="conteneur" align="center">
+      <div class="overlay-container">
+        <img src="images/best.png" />
+        <div class="logo-text">
+          <font>GPA CALCULATOR</font>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grade-calc main section-->
+
+  <section class="boxer">
+
+    <!-- Hidden div for image and result -->
+
+    <div class="result-box">
+      <img class="just4Fun" src="" alt="Image-to-be-inserted">
+      <h1 class="result-gpa"></h1>
+      <h1 class="result-gpa2"></h1>
+    </div>
+
+    <!-- Actual input fields for grade-calc -->
+
+    <div class="calc-area">
+      <div class="row first-row">
+        <div class="col-lg-4">
+          <label class="row-head" for="">SUBJECT</label>
+        </div>
+        <div class="col-lg-4">
+          <label class="row-head" for="">GRADE</label>
+        </div>
+        <div class="col-lg-4">
+          <label class="row-head" for="">CREDIT</label>
+        </div>
+      </div>
+
+      <div class="row rest-row">
+        <div class="col-lg-4 col-md-12">
+          <label class="row-head sub-x" for="">SUBJECT-1</label>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+
+          <select class="grade1" name="">
+            <option value="10">S</option><br>
+            <option value="9">A</option><br>
+            <option value="8">B</option><br>
+            <option value="7">C</option><br>
+            <option value="6">D</option><br>
+            <option value="5">E</option><br>
+            <option value="4">F</option><br>
+            <option value="1">U</option><br>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="credit1" name="">
+            <option value="0">0</option><br>
+            <option value="1">1</option><br>
+            <option value="2">2</option><br>
+            <option value="3">3</option><br>
+            <option value="4">4</option><br>
+          </select>
+        </div>
+      </div>
+
+      <div class="row rest-row">
+        <div class="col-lg-4 col-md-12">
+          <label class="row-head sub-x" for="">SUBJECT-2</label>
+        </div>
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="grade2" name="">
+            <option value="10">S</option><br>
+            <option value="9">A</option><br>
+            <option value="8">B</option><br>
+            <option value="7">C</option><br>
+            <option value="6">D</option><br>
+            <option value="5">E</option><br>
+            <option value="4">F</option><br>
+            <option value="1">U</option><br>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="credit2" name="">
+            <option value="0">0</option><br>
+            <option value="1">1</option><br>
+            <option value="2">2</option><br>
+            <option value="3">3</option><br>
+            <option value="4">4</option><br>
+          </select>
+        </div>
+      </div>
+
+      <div class="row rest-row">
+        <div class="col-lg-4 col-md-12">
+          <label class="row-head sub-x" for="">SUBJECT-3</label>
+        </div>
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="grade3" name="">
+            <option value="10">S</option><br>
+            <option value="9">A</option><br>
+            <option value="8">B</option><br>
+            <option value="7">C</option><br>
+            <option value="6">D</option><br>
+            <option value="5">E</option><br>
+            <option value="4">F</option><br>
+            <option value="1">U</option><br>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="credit3" name="">
+            <option value="0">0</option><br>
+            <option value="1">1</option><br>
+            <option value="2">2</option><br>
+            <option value="3">3</option><br>
+            <option value="4">4</option><br>
+          </select>
+        </div>
+      </div>
+
+      <div class="row rest-row">
+        <div class="col-lg-4 col-md-12">
+          <label class="row-head sub-x" for="">SUBJECT-4</label>
+        </div>
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="grade4" name="">
+            <option value="10">S</option><br>
+            <option value="9">A</option><br>
+            <option value="8">B</option><br>
+            <option value="7">C</option><br>
+            <option value="6">D</option><br>
+            <option value="5">E</option><br>
+            <option value="4">F</option><br>
+            <option value="1">U</option><br>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="credit4" name="">
+            <option value="0">0</option><br>
+            <option value="1">1</option><br>
+            <option value="2">2</option><br>
+            <option value="3">3</option><br>
+            <option value="4">4</option><br>
+          </select>
+        </div>
+      </div>
+
+      <div class="row rest-row">
+        <div class="col-lg-4 col-md-12">
+          <label class="row-head sub-x" for="">SUBJECT-5</label>
+        </div>
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="grade5" name="">
+            <option value="10">S</option><br>
+            <option value="9">A</option><br>
+            <option value="8">B</option><br>
+            <option value="7">C</option><br>
+            <option value="6">D</option><br>
+            <option value="5">E</option><br>
+            <option value="4">F</option><br>
+            <option value="1">U</option><br>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="credit5" name="">
+            <option value="0">0</option><br>
+            <option value="1">1</option><br>
+            <option value="2">2</option><br>
+            <option value="3">3</option><br>
+            <option value="4">4</option><br>
+          </select>
+        </div>
+      </div>
+
+      <div class="row rest-row">
+        <div class="col-lg-4 col-md-12">
+          <label class="row-head sub-x" for="">SUBJECT-6</label>
+        </div>
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="grade6" name="">
+            <option value="10">S</option><br>
+            <option value="9">A</option><br>
+            <option value="8">B</option><br>
+            <option value="7">C</option><br>
+            <option value="6">D</option><br>
+            <option value="5">E</option><br>
+            <option value="4">F</option><br>
+            <option value="1">U</option><br>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="credit6" name="">
+            <option value="0">0</option><br>
+            <option value="1">1</option><br>
+            <option value="2">2</option><br>
+            <option value="3">3</option><br>
+            <option value="4">4</option><br>
+          </select>
+        </div>
+      </div>
+
+      <div class="row rest-row">
+        <div class="col-lg-4 col-md-12">
+          <label class="row-head sub-x" for="">SUBJECT-7</label>
+        </div>
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="grade7" name="">
+            <option value="10">S</option><br>
+            <option value="9">A</option><br>
+            <option value="8">B</option><br>
+            <option value="7">C</option><br>
+            <option value="6">D</option><br>
+            <option value="5">E</option><br>
+            <option value="4">F</option><br>
+            <option value="1">U</option><br>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="credit7" name="">
+            <option value="0">0</option><br>
+            <option value="1">1</option><br>
+            <option value="2">2</option><br>
+            <option value="3">3</option><br>
+            <option value="4">4</option><br>
+          </select>
+        </div>
+      </div>
+
+      <div class="row rest-row">
+        <div class="col-lg-4 col-md-12">
+          <label class="row-head sub-x" for="">SUBJECT-8</label>
+        </div>
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="grade8" name="">
+            <option value="10">S</option><br>
+            <option value="9">A</option><br>
+            <option value="8">B</option><br>
+            <option value="7">C</option><br>
+            <option value="6">D</option><br>
+            <option value="5">E</option><br>
+            <option value="4">F</option><br>
+            <option value="1">U</option><br>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="credit8" name="">
+            <option value="0">0</option><br>
+            <option value="1">1</option><br>
+            <option value="2">2</option><br>
+            <option value="3">3</option><br>
+            <option value="4">4</option><br>
+          </select>
+        </div>
+      </div>
+
+      <div class="row rest-row">
+        <div class="col-lg-4 col-md-12">
+          <label class="row-head sub-x" for="">SUBJECT-9</label>
+        </div>
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="grade9" name="">
+            <option value="10">S</option><br>
+            <option value="9">A</option><br>
+            <option value="8">B</option><br>
+            <option value="7">C</option><br>
+            <option value="6">D</option><br>
+            <option value="5">E</option><br>
+            <option value="4">F</option><br>
+            <option value="1">U</option><br>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-gaper">
+          <select class="credit9" name="">
+            <option value="0">0</option><br>
+            <option value="1">1</option><br>
+            <option value="2">2</option><br>
+            <option value="3">3</option><br>
+            <option value="4">4</option><br>
+          </select>
+        </div>
+      </div>
+
+      <div id="clone_wrapper">
+        <div class="row rest-row">
+          <div class="col-lg-4 col-md-12">
+            <label class="row-head sub-x" for="">SUBJECT-10</label>
+          </div>
+          <div class="col-lg-4 col-md-6 col-gaper">
+            <select class="grade10" name="">
+              <option value="10">S</option><br>
+              <option value="9">A</option><br>
+              <option value="8">B</option><br>
+              <option value="7">C</option><br>
+              <option value="6">D</option><br>
+              <option value="5">E</option><br>
+              <option value="4">F</option><br>
+              <option value="1">U</option><br>
+            </select>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-gaper">
+            <select class="credit10" name="">
+              <option value="0">0</option><br>
+              <option value="1">1</option><br>
+              <option value="2">2</option><br>
+              <option value="3">3</option><br>
+              <option value="4">4</option><br>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="boxers">
+    <i class="fas fa-calculator add-code"> <span class="abc">CALCULATE</span><p class="info-user">| For unused subjects set credit as 0 |</p></i>
+  </section>
+
+
+
+  <!-- Calculate grade on click -->
+
+
+  <!-- java-script -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
