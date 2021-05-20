@@ -10,6 +10,7 @@
 
   .just4Fun {
   margin-left: 0;
+  /* margin-top: 300px; */
 }
 
   .boxer {
@@ -46,6 +47,10 @@
 
   .screen-overlay {
   visibility: hidden;
+}
+
+.result-box {
+margin-top: 380%;
 }
 
 }
@@ -355,11 +360,28 @@ image {
   padding: 0.5 rem 0 0 0;
 }
 
+.re-btn {
+  padding: 0.2rem 0;
+  background: #ffd600;
+  color: #000;
+  transition: 0.5s;
+  font-family: B612, Arial, Helvetica, sans-serif;
+  font-style: bold;
+  width: 20%;
+  border-radius: 20px;
+  border: none;
+}
+
+.re-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
 .result-box {
   display: flex;
   flex-direction: column;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   margin-left: 3.3%;
   text-align: center;
   align-items: center;
