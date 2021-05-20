@@ -1,16 +1,52 @@
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 670px) {
+.screen-overlay {
+  visibility: visible;
+}
+}
+@media only screen and (max-width: 660px) {
   .add-code {
     margin: 0;
   }
 
+  .just4Fun {
+  margin-left: 0;
+}
+
   .boxer {
-    padding: 4%;
+    padding: 40px 60px 0 60px;
+    margin: 0;
+    text-align: center;
+
   }
 
   .boxers {
-    padding: 0 4%;
-    /* text-align: center; */
+    padding: 10px 60px 60px 60px;
+    margin: 0;
   }
+
+  .first-row {
+    margin-bottom: 5px;
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .first-row .col-lg-4 {
+      border: none;
+
+}
+
+  .rest-row {
+    margin-bottom: 30px;
+  }
+
+  select {
+      width: 130px;
+  }
+
+  .screen-overlay {
+  visibility: hidden;
+}
 
 }
 
@@ -20,7 +56,9 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    min-width: 50vh;
+    min-height:fit-content;
+    overflow: hidden;
   }
 }
 
@@ -28,6 +66,20 @@
   .info-user {
     display: inline;
   }
+
+  select {
+  width: 200px;
+}
+
+.boxer {
+  padding: 4% 30% 0 30%;
+  text-align: center;
+}
+
+.boxers {
+  padding: 0 30%;
+  /* text-align: center; */
+}
 }
 
 body {
@@ -36,15 +88,10 @@ body {
 }
 
 select {
-  width: 200px;
   background-color: black;
   color: white;
   border: none;
   text-align: center;
-}
-
-option:focus {
-  color: #ffd600;
 }
 
 image {
@@ -54,8 +101,6 @@ image {
 /* Loading Animation */
 .conteneur {
   background-color: #000;
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -206,19 +251,11 @@ image {
 }
 
 /* MY CSS */
-.boxer {
-  padding: 4% 30% 0 30%;
-  text-align: center;
-}
 
-.boxers {
-  padding: 0 30%;
-  /* text-align: center; */
-}
 
 .screen-overlay {
   background-color: #000000;
-  color: #fffff;
+  color: #fff;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -226,7 +263,6 @@ image {
   transition: opacity 0.4s ease-in-out;
   z-index: 1;
   opacity: 1;
-  visibility: visible;
   display: flex;
   flex-direction: column;
   justify-content: center;
